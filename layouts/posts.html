@@ -1,1 +1,18 @@
 
+---
+layout: default
+---
+<article class="post-content">
+  <div style="margin-bottom: 2rem;">
+    <span class="card-date">{{ page.date | date: "%d %b %Y" }}</span>
+    <h1 style="font-size: 2rem; margin: 0.5rem 0 0 0;">{{ page.title }}</h1>
+  </div>
+
+  <div style="line-height: 1.7; font-size: 1.05rem;">
+    {{ content }}
+  </div>
+
+  <div style="margin-top: 3rem;">
+    <a href="/posts" class="home-see-all">← Voltar para todos os textos</a>
+  </div>
+</article>
