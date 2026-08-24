@@ -1,8 +1,8 @@
 title: "Memo | Blog e Ideias"
 author: "Flávio"
 description: "Literatura e linguagens."
-url: "https://makinadeideias.github.io/memo"
-baseurl: ""
+url: "https://makinadeideias.github.io/"
+baseurl: "/memo"
 
 markdown: kramdown
 permalink: /post/:title/
