@@ -1,1 +1,38 @@
 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/modeswitcher.js"></script>
+</head>
+<body>
+  <div class="container-custom">
+    <nav class="site-nav">
+      <a href="/" class="brand">{{ site.author }}</a>
+      <div class="nav-links">
+        <a href="/sobre">Sobre</a>
+        <a href="/posts">Blog</a>
+        <a href="/projetos">Projetos</a>
+        <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Alternar Tema">
+          <i class="fa-solid fa-circle-half-stroke"></i>
+        </button>
+      </div>
+    </nav>
+
+    <main>
+      {{ content }}
+    </main>
+
+    <footer id="copyright">
+      <p>© {{ 'now' | date: "%Y" }} • {{ site.author }} • <a href="/feed.xml">RSS</a> • <a href="/sobre">Sobre</a></p>
+    </footer>
+  </div>
+</body>
+</html>
