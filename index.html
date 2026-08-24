@@ -2,3 +2,70 @@
 layout: home
 # Index page
 ---
+---
+layout: default
+---
+<div class="home-hero">
+  <div class="home-avatar">
+    <img src="/assets/img/profile.jpg" alt="{{ site.author }}" />
+  </div>
+  <div class="home-intro-text">
+    <h1 class="hero-title">{{ site.author }}</h1>
+    <p class="hero-subtitle">
+      Professor e pesquisador. Escrevo sobre educação, tecnologia e processos de criação.
+    </p>
+    <div class="home-links">
+      <a href="/posts" class="home-link-chip">Blog</a>
+      <a href="/projetos" class="home-link-chip">Projetos</a>
+      <a href="https://youtube.com" target="_blank" class="home-link-chip">YouTube</a>
+    </div>
+  </div>
+</div>
+
+<div class="home-grid">
+  <!-- Coluna 1: Novidades/Avisos -->
+  <div class="news-section">
+    <h3 class="section-title">Novidades</h3>
+    <div class="home-card-list">
+      <div class="home-card">
+        <div class="card-date">22 Ago 2026</div>
+        <div class="card-title">Novo artigo sobre tecnologias e práticas docentes publicado.</div>
+      </div>
+      <div class="home-card">
+        <div class="card-date">10 Ago 2026</div>
+        <div class="card-title">Atualização dos materiais didáticos e minicursos.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Coluna 2: Posts Recentes Automáticos do Jekyll -->
+  <div class="latest-posts-section">
+    <h3 class="section-title">Posts Recentes</h3>
+    <div class="home-card-list">
+      {% for post in site.posts limit:3 %}
+        <a href="{{ post.url }}" class="home-card">
+          <div class="card-date">{{ post.date | date: "%d %b %Y" }}</div>
+          <div class="card-title">{{ post.title }}</div>
+        </a>
+      {% endfor %}
+    </div>
+    <a href="/posts" class="home-see-all">Ver todos os artigos →</a>
+  </div>
+</div>
+
+<!-- Seção Inferior de Projetos -->
+<div style="margin-top: 50px;">
+  <h3 class="section-title">Projetos Educacionais</h3>
+  <div class="projects-grid">
+    <a href="https://github.com" class="home-card" target="_blank">
+      <div class="card-date">SIMULADOR / JOGO</div>
+      <div class="card-title">Mákina de Ideias</div>
+      <div class="card-desc">Plataforma e ferramentas interativas para educadores.</div>
+    </a>
+    <a href="https://github.com" class="home-card" target="_blank">
+      <div class="card-date">PESQUISA</div>
+      <div class="card-title">Letramento e IA</div>
+      <div class="card-desc">Estudos e ensaios sobre agência docente e coautoria.</div>
+    </a>
+  </div>
+</div>
