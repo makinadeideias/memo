@@ -1,7 +1,7 @@
-title: "Meu Nome | Blog e Ideias"
-author: "Seu Nome"
-description: "Textos, pesquisas e projetos sobre educação, tecnologia e linguagem."
-url: "https://seu-usuario.github.io"
+title: "Memo | Blog e Ideias"
+author: "Flávio"
+description: "Literatura e linguagens."
+url: "https://makinadeideias.github.io/memo"
 baseurl: ""
 
 markdown: kramdown
